@@ -1,2 +1,2 @@
-# data-pump
-Reskinned proj-1 (Austin-Aware) repo.  Suitable as a starting point for proj-2.
+# proj-1
+First team project for UT Coding Bootcamp
