@@ -108,7 +108,8 @@ function cInit(map, model) {
 // Function: normalizeData
 // Usage: var normalizedData = normalizeData(rawData, model, "trafficFatalities2015");
 // -----------------------------------------------------------------------------------
-// Normalizes all position-based
+// Normalizes one record of input data from a given data source into a flat
+// structure that can be directly injected into a relational database.
 
 function normalizeData(rawData, model, dataSource) {
 
@@ -123,20 +124,20 @@ function normalizeData(rawData, model, dataSource) {
 	// Basically we're gonna flatten this part of the input schema:
 	//
 	// 		"location_1": {             
-    //			"type": "Point",
-    //			"coordinates": [
-    //				30.32067,
-    //				-97.715944
-    //			]
-    //		}
-    //
-    // into this:
-    //
-    // 		"location_lat": 30.32067,
-    // 		"location_lng": -97.715944
-    //
-    // plus add a couple presentation properties relating to pin marker text.
-    //
+	//			"type": "Point",
+	//			"coordinates": [
+	//				30.32067,
+	//				-97.715944
+	//			]
+	//		}
+	//
+	// into this:
+	//
+	// 		"location_lat": 30.32067,
+	// 		"location_lng": -97.715944
+	//
+	// plus add a couple presentation properties relating to pin marker text.
+	//
 	//		"marker_title" = "9700 blk E Hwy 290 WB Svrd, MV/ROR, Motor Vehicle, 2015-11-03, Tues, 0:04"
 	//		"marker_label" = "";  // Might be "F" for fatality, for example.
 
@@ -212,7 +213,7 @@ function loadData(map, model, dataSource) {
 						// -----------------------------------------------------------	
 						// !! This data can be used to populate our mysql db.
 						// -----------------------------------------------------------	
-						var normalizedData = normalizeData(entry, model, "trafficFatalities2015"); 
+						var normalizedData = normalizeData(entry, model, dataSource); 
 
 						// -----------------------------------------------------------	
 						// !! Add integration with ORM here, using normalizedData obj.
