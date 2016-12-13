@@ -741,7 +741,13 @@ function getMarkerTitle(entry, dataSource) {
 // hover text.
 
 function getMarkerTitleFatalAustin(entry) {
-	console.log("model.getMarkerTitleFataAustin");
+	console.log("model.getMarkerTitleFatalAustin");
+
+	if (!entry.date || !entry.charge) {
+		console.log("model.getMarkerTitleFatalAustin: Hit atypical record in input data.  Ignoring.");
+		return "";
+	}
+	
 	var date = entry.date.replace(/T00:00:00.000/, '');
 	var title;
 	if (entry.charge.toLowerCase() == "n/a") {

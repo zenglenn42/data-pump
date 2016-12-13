@@ -105,6 +105,82 @@ function cInit(map, model) {
 	});
 }
 
+// Function: normalizeData
+// Usage: var normalizedData = normalizeData(rawData, model, "trafficFatalities2015");
+// -----------------------------------------------------------------------------------
+// Normalizes all position-based
+
+function normalizeData(rawData, model, dataSource) {
+
+	// For starters, just normalize 2015 traffic data.
+	// We'll generalize later.
+	//
+	// All fields will pass through from raw to normalized except 
+	// those involving nested objects in the input schema.
+	// These will be unnested for easier population in a relational
+	// database.
+	//
+	// Basically we're gonna flatten this part of the input schema:
+	//
+	// 		"location_1": {             
+    //			"type": "Point",
+    //			"coordinates": [
+    //				30.32067,
+    //				-97.715944
+    //			]
+    //		}
+    //
+    // into this:
+    //
+    // 		"location_lat": 30.32067,
+    // 		"location_lng": -97.715944
+    //
+    // plus add a couple presentation properties relating to pin marker text.
+    //
+	//		"marker_title" = "9700 blk E Hwy 290 WB Svrd, MV/ROR, Motor Vehicle, 2015-11-03, Tues, 0:04"
+	//		"marker_label" = "";  // Might be "F" for fatality, for example.
+
+	if (dataSource === "trafficFatalities2015") {
+		var normalizedSchema = {
+		    "case_number": "",
+		    "case_status": "",
+		    "charge": "",
+		    "date": "",
+		    "day": "",
+		    "dl_status_incident": "",
+		    "fatal_crash": "",
+		    "hour": "",
+		    "impaired_type": "",
+		    "killed_driver_pass": "",
+		    "location": "",
+		    "month": "",
+		    "of_fatalities": "",
+		    "ran_red_light": "",
+		    "related": "",
+		    "restraint_helmet": "",
+		    "sector": "",
+		    "speeding": "",
+		    "time": "",
+		    "type": "",
+		    "type_of_road": ""
+		};
+		var normalizedData = {};
+		for (var key in normalizedSchema) {
+			normalizedData[key] = rawData[key];
+		}
+		normalizedData.location_lat = model.getLat(rawData, dataSource);
+		normalizedData.location_lng = model.getLng(rawData, dataSource);
+		normalizedData.marker_title = model.getMarkerTitle(rawData, dataSource);
+		normalizedData.marker_label = model.getMarkerLabel(rawData, dataSource);
+		console.log("normalizeData: ", normalizedData);
+
+		return normalizedData;
+
+	} else {
+		return rawData;
+	}
+}
+
 // Function: loadData
 // Usage: loadData(map, model, "trafficData");
 // ------------------------------------------------
@@ -133,8 +209,16 @@ function loadData(map, model, dataSource) {
 				$.getJSON(dataSourceUrl, function(response) {
 					$.each(response, function(i, entry) {
 
-						// Fetch lat/lng positon for the marker.
+						// -----------------------------------------------------------	
+						// !! This data can be used to populate our mysql db.
+						// -----------------------------------------------------------	
+						var normalizedData = normalizeData(entry, model, "trafficFatalities2015"); 
 
+						// -----------------------------------------------------------	
+						// !! Add integration with ORM here, using normalizedData obj.
+						// -----------------------------------------------------------	
+
+						// Fetch lat/lng positon for the marker.
 						var lat = model.getLat(entry, dataSource);
 						var lng = model.getLng(entry, dataSource);
 						console.log("(lat, lng)", "(" + lat + ", " + lng + ")");
