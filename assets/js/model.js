@@ -41,7 +41,8 @@ var model = {
 
 				trafficFatalities2015: {
 					description: "2015 Austin Traffic Fatalities",
-					queryUrl: "https://data.austintexas.gov/resource/i3kd-c47g.json?",
+					queryHost: "https://data.austintexas.gov",
+					queryPath: "/resource/i3kd-c47g.json?",
 					apiKeyName: "$$app_token",
 					apiKey: "g9GkfcLndwliKunxNyYve0Nnv",
 					// Normalize the fetching of lat/lng from schemas that vary across dataSources.
@@ -61,7 +62,8 @@ var model = {
 				},
 				trafficFatalities2016: {
 					description: "2016 Austin Traffic Fatalities",
-					queryUrl: "https://data.austintexas.gov/resource/vn6k-4eq5.json?",
+					queryHost: "https://data.austintexas.gov",
+					queryPath: "/resource/vn6k-4eq5.json?",
 					apiKeyName: "$$app_token",
 					apiKey: "g9GkfcLndwliKunxNyYve0Nnv",
 					// Normalize the fetching of lat/lng from schemas that vary across dataSources.
@@ -74,7 +76,8 @@ var model = {
 				},
 				trafficSignalsOnFlash: {
 					description: "Traffic Signals on Flash",
-					queryUrl: "https://data.austintexas.gov/resource/utgi-umz5.json?",
+					queryHost: "https://data.austintexas.gov",
+					queryPath: "/resource/utgi-umz5.json?",
 					apiKeyName: "$$app_token",
 					apiKey: "g9GkfcLndwliKunxNyYve0Nnv",
 					// Normalize the fetching of lat/lng from schemas that vary across dataSources.
@@ -88,7 +91,8 @@ var model = {
 				austinDangerousDogs: {
 					// See: https://dev.socrata.com/foundry/data.austintexas.gov/h8x4-nvyi
 					description: "Austin Dangerous Dogs",
-					queryUrl: "https://data.austintexas.gov/resource/h8x4-nvyi.json?",
+					queryHost: "https://data.austintexas.gov",
+					queryPath: "/resource/h8x4-nvyi.json?",
 					apiKeyName: "$$app_token",
 					apiKey: "g9GkfcLndwliKunxNyYve0Nnv",
 					// Normalize the fetching of lat/lng from schemas that vary across dataSources.
@@ -102,7 +106,8 @@ var model = {
 				austinFoundPets: {
 					// See: https://data.austintexas.gov/Government/Austin-Animal-Center-Found-Pets-Map/hye6-gvq2
 					description: "Austin Found Pets",
-					queryUrl: "https://data.austintexas.gov/resource/hye6-gvq2.json?",
+					queryHost: "https://data.austintexas.gov",
+					queryPath: "/resource/hye6-gvq2.json?",
 					apiKeyName: "$$app_token",
 					apiKey: "g9GkfcLndwliKunxNyYve0Nnv",
 					// Normalize the fetching of lat/lng from schemas that vary across dataSources.
@@ -131,7 +136,6 @@ var model = {
         connecticut: { // Connecticut school districts: http://jsfiddle.net/chrismetcalf/8m2Cs/
 			//appName: "Connected Connecticut",
 			backgroundUrl: "http://img.ev.mu/images/attractions/6917/960x384/780276.jpg",
-			//backgroundUrl: "http://media.istockphoto.com/photos/hartford-connecticut-skyline-picture-id478718780?k=6&m=478718780&s=170667a&w=0&h=Xbc1o9FiTBHr_IzEc0pfez94qgX3mC54RH5-x0g7SbI=",
 			backgroundImagePosition: "center",
 			location: {
 				lat: 41.7656874, 
@@ -146,7 +150,8 @@ var model = {
 			dataSources: {
 				schoolDistricts: {
 					description: "School Districs of Connecticut",
-					queryUrl: "https://data.ct.gov/resource/9k2y-kqxn.json?organization_type=Public%20School%20Districts&$$app_token=CGxaHQoQlgQSev4zyUh5aR5J3",
+					queryHost: "https://data.ct.gov",
+					queryPath: "/resource/9k2y-kqxn.json?organization_type=Public%20School%20Districts&$$app_token=CGxaHQoQlgQSev4zyUh5aR5J3",
 					apiKeyName: "",
 					apiKey: "",
 					getLat: function(entry) {return (entry.location_1) ? entry.location_1.latitude : undefined;},
@@ -474,6 +479,7 @@ function getEndpointUrl(place, dataSource, paramStr) {
 	else {
 		var selector = this.places[place].dataSources[dataSource];
 		result = this.getEndpointUrlFromSelector(selector, paramStr);
+		console.log("model.getEndpointUrl", result);
 	}
 	return result;
 }
@@ -493,7 +499,9 @@ function getEndpointUrlFromSelector(selector, paramStr) {
 	if (!selector) {
 		console.log("model.getEndpointUrlFromSelector: Invalid selector: ", selector);
 	} else {
-		var queryUrl = selector.queryUrl;
+		var queryUrl  = selector.queryHost;
+		queryUrl += selector.queryPath;
+
 		var apiKeyName = selector.apiKeyName;
 		var apiKey = selector.apiKey;
 		var apiToken = "";
@@ -747,7 +755,7 @@ function getMarkerTitleFatalAustin(entry) {
 		console.log("model.getMarkerTitleFatalAustin: Hit atypical record in input data.  Ignoring.");
 		return "";
 	}
-	
+
 	var date = entry.date.replace(/T00:00:00.000/, '');
 	var title;
 	if (entry.charge.toLowerCase() == "n/a") {
@@ -1054,7 +1062,7 @@ function resetMap() {
 function setDataSource(dataSource) {
 	console.log("model.setDataSource");
 
-	if (isKnownDataSource(dataSource)) {
+	if (this.isKnownDataSource(dataSource)) {
 		this.dynamic.dataSource = dataSource;
 	} else {
 		console.log("model.setDataSource: Error, rejecting unknown dataSource argument:", dataSource);
@@ -1298,5 +1306,7 @@ function unitTests() {
 	return result;
 }
 
+module.exports = model;
+
 // Uncomment this when bench-testing the model off to the side.
-// console.log("Did unit tests pass?", model.unitTests());
+//console.log("Did unit tests pass?", model.unitTests());
