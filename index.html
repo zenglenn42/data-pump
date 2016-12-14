@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>This App Requires JavaScript</title>
 
-	<!--Bootstrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
 
 	<!--Font Awesome map pin icon-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<!-- Load jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	<!-- Load a nice font -->
 	<link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" rel="stylesheet">
@@ -26,7 +30,7 @@
 		<div class="jumbotron">
 			<h1 style="color: white">
 				<i class="fa fa-database fa-2x" aria-hidden="true"></i>
-				<span id="jumbotron-place">app-title</span>
+				<span id="jumbotron-place">data-pump</span>
 			</h1>
 		</div>
 
@@ -35,42 +39,56 @@
 				<img src="http://placehold.it/640x480" alt="Map">
 			</div>
 			<!--Search buttons-->
-			<div class="col-2-sm">
+			<div class="col-sm-2">
 				<div class="dropdown">
 					<button class="dropbtn" id="traffic2015-button"><span class="button-text">&nbsp;2015 Traffic Fatalities&nbsp;</span></button>
 				</div>
 			</div>
 			<br>
-			<div class="col-2-sm">
+			<div class="col-sm-2">
 				<div class="dropdown">
 					<button class="dropbtn" id="traffic2016-button"><span class="button-text">&nbsp;2016 Traffic Fatalities&nbsp;</span></button>
 				</div>
 			</div>
 			<br>
-			<div class="col-2-sm">
+			<div class="col-sm-2">
 				<div class="dropdown">
 					<button class="dropbtn" id="trafficSignalsOnFlash-button"><span class="button-text">&nbsp;Traffic Signals On Flash&nbsp;</span></button>
 				</div>
 			</div>
 			<br>
-			<div class="col-2-sm">
+			<div class="col-sm-2">
 				<div class="dropdown">
 					<button class="dropbtn" id="austinDangerousDogs-button"><span class="button-text">&nbsp;Dangerous Dogs&nbsp;</span></button>
 				</div>
 			</div>
 			<br>
-			<div class="col-2-sm">
+			<div class="col-sm-2">
 				<div class="dropdown">
 					<button class="dropbtn" id="austinFoundPets-button"><span class="button-text">&nbsp;Found Pets&nbsp;</span></button>
 				</div>
 			</div>
-			<div class="col-2-sm">
+			<div class="col-sm-2">
 				<div class="dropdown" style="margin-top:20px; padding-top: 0px">
 				<input type="button" value="Reset Map" id="reset-button">
 				</div>
 			</div>
 		</div>
 	</div>
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 
 	<!-- Include the controller and model. -->
 	<script src="assets/js/controller.js" type="text/javascript"></script>

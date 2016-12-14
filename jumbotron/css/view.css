@@ -11,7 +11,8 @@
 
 body {
     font-family: 'Maven Pro', sans-serif;
-    background-color: rgb(51,66,127);
+    background-color: #EBEBEB!important;
+    font-family: 'Titillium Web', sans-serif!important;
 }
 
 /* Map area */
@@ -28,6 +29,10 @@ body {
     width: 640px;
 }
 
+.primary-color-dark {
+    background-color: #3B518B!important;
+}
+
 /* Adding a black background just in case the styling devolves to
  * white background and causes foreground white text to 'disappear'
  * like it did earlier today.  This will give us adequate contrast 
@@ -42,7 +47,7 @@ body {
 
 /* Title heading */
  h1 {
-    font-size: 70px;
+    font-size: 90px;
  }
 
 .jumbotron {
@@ -52,12 +57,14 @@ body {
     background-size: cover;
     background-position: top center;
     opacity: 0.9;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #jumbotron-place {
     color: white;
+    font-size: 70px;
 }
 
 /* Dropdown Button */
