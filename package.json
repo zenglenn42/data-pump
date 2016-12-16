@@ -1,0 +1,26 @@
+{
+  "name": "data-pump",
+  "version": "1.0.0",
+  "description": "Connect to remote data source and pump it into our application.",
+  "main": "assets/js/model.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zenglenn42/data-pump.git"
+  },
+  "author": "zenglenn42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenglenn42/data-pump/issues"
+  },
+  "homepage": "https://github.com/zenglenn42/data-pump",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
