@@ -1,26 +1,26 @@
 {
   "name": "data-pump",
   "version": "1.0.0",
-  "description": "Connect to remote data source and pump it into our application.",
-  "main": "assets/js/model.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "Second team project for UT Coding Bootcamp",
+  "main": "server.js",
   "scripts": {
-    "test": "mocha"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/zenglenn42/data-pump.git"
+    "url": "git+https://github.com/timothydlee/data-pump.git"
   },
-  "author": "zenglenn42",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zenglenn42/data-pump/issues"
+    "url": "https://github.com/timothydlee/data-pump/issues"
   },
-  "homepage": "https://github.com/zenglenn42/data-pump",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+  "homepage": "https://github.com/timothydlee/data-pump#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "path": "^0.12.7"
   }
 }
