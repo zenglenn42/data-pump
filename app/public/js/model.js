@@ -21,7 +21,7 @@ var model = {
 	places: {
 		austin: {
 			//appName: "data-pump",
-			backgroundUrl: "./assets/img/data-rig-900x338.jpg",
+			backgroundUrl: "./img/data-rig-900x338.jpg",
 			backgroundImagePosition: "top center",
 			location: {
           		lat: 30.27504,
