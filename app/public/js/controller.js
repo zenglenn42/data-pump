@@ -17,7 +17,7 @@ $(document).ready(initMVC);
 // initial data comes from the model itself.
 
 function initMVC() {
-	console.log("initMVC");
+	console.log('initMVC');
 
 	// Run model unit tests for sanity.  We'll comment this out in production.
 	//(model.unitTests()) ? console.log("model.unitTests() passed") :
