@@ -10,7 +10,7 @@ var model = {
 	// model attributes
 	mapAPI: {
 		geocode: {
-			description: 'Google Geocoding API', // Turns street address -> lat/lng.
+			description: "Google Geocoding API", // Turns street address -> lat/lng.
 			queryUrl: "https://maps.googleapis.com/maps/api/geocode/json?",
 			apiKeyName: "&key",
 			apiKey: "AIzaSyD4-iShS_FXpTaYoz6LjgU7Yosbu_cxjsU"
@@ -21,7 +21,7 @@ var model = {
 	places: {
 		austin: {
 			//appName: "data-pump",
-			backgroundUrl: "./img/data-rig-900x338.jpg",
+			backgroundUrl: "./assets/img/data-rig-900x338.jpg",
 			backgroundImagePosition: "top center",
 			location: {
           		lat: 30.27504,
@@ -742,6 +742,12 @@ function getMarkerTitle(entry, dataSource) {
 
 function getMarkerTitleFatalAustin(entry) {
 	console.log("model.getMarkerTitleFataAustin");
+
+	if (!entry.date || !entry.charge) {
+		console.log("model.getMarkerTitleFatalAustin: Hit atypical record in input data.  Ignoring.");
+		return "";
+	}
+
 	var date = entry.date.replace(/T00:00:00.000/, '');
 	var title;
 	if (entry.charge.toLowerCase() == "n/a") {
@@ -1048,7 +1054,7 @@ function resetMap() {
 function setDataSource(dataSource) {
 	console.log("model.setDataSource");
 
-	if (isKnownDataSource(dataSource)) {
+	if (this.isKnownDataSource(dataSource)) {
 		this.dynamic.dataSource = dataSource;
 	} else {
 		console.log("model.setDataSource: Error, rejecting unknown dataSource argument:", dataSource);
@@ -1291,6 +1297,7 @@ function unitTests() {
 
 	return result;
 }
+module.exports = model;
 
 // Uncomment this when bench-testing the model off to the side.
 // console.log("Did unit tests pass?", model.unitTests());
