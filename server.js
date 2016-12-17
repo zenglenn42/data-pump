@@ -1,36 +1,40 @@
-// *********************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-// *********************************************************************************
+//---------------------------------------------------------------------------
+// File: servers.js
+//
+// Establish a nodejs/express web server.
+//---------------------------------------------------------------------------
 
+//---------------------------------------------------------------------------
 // Dependencies
-// =============================================================
+//---------------------------------------------------------------------------
 var express = require("express");
 var bodyParser = require("body-parser");
 
-
-// Sets up the Express App
-// =============================================================
+//---------------------------------------------------------------------------
+// Establish express server instance.
+//---------------------------------------------------------------------------
 var app = express();
 var PORT = process.env.PORT || 8080;
 
-// Sets up the Express app to handle data parsing
+// Configure body parsing middleware for incoming posts.
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
+
 app.use(express.static("app/public"));
 
+// Define the routes known to the server.
 
-// Routes
-// =============================================================
 require("./app/routes/api-routes.js")(app);
 require("./app/routes/html-routes.js")(app);
 
+// Start web server on the specified port so it
+// can respond to incoming requests from the client.
 
-// Starts the server to begin listening
-// =============================================================
 app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+	console.log("data-pump server listening on port:", PORT);
 });

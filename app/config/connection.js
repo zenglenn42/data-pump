@@ -1,6 +1,8 @@
-// *********************************************************************************
-// CONNECTION.JS - THIS FILE INITIATES THE CONNECTION TO MYSQL
-// *********************************************************************************
+//---------------------------------------------------------------------------
+// File: connections.js
+//
+// This file initiates the connection to MySQL.
+//---------------------------------------------------------------------------
 
 // Require mysql
 var mysql = require("mysql");
@@ -8,7 +10,7 @@ var mysql = require("mysql");
 // Set up our connection information
 var connection = mysql.createConnection({
   port: 3306,
-  host: 'localhost',
+  host: "localhost",
   user: "root",
   password: "",
   database: "projecttest"
