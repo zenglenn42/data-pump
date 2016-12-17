@@ -1,7 +1,7 @@
 CREATE DATABASE projectTest;
 USE projectTest;
 CREATE TABLE dummydata(
-	id INTEGER(11) AUTO_INCREMENT NOT NULL,
+    id INTEGER(11) AUTO_INCREMENT NOT NULL,
     case_number VARCHAR(255),
     case_status VARCHAR(255),
     charge VARCHAR(255),
