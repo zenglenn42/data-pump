@@ -18,6 +18,7 @@ Your app should now be running on [localhost:8080](http://localhost:8080/).
 
 ```
 $ heroku create
+$ heroku buildpacks:set heroku/nodejs
 $ git push heroku master
 $ heroku open
 ```
