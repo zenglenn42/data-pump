@@ -23,7 +23,8 @@ body {
 
 .jumbotron {
     background-color: #fff;
-    padding: 4rem !important;
+    padding: 6rem !important;
+    margin-top: -50px !important;
 }
 
 .col-md-12 {
@@ -72,12 +73,12 @@ footer.page-footer {
 .jumbotron {
     text-align: center;
     background-image: url("../img/atx.jpg");
+    background-color: rgba(0,0,0,.6);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom center;
     opacity: 0.9;
     margin-bottom: 40px;
-    margin-top: 40px;
 }
 
 #jumbotron-place {
