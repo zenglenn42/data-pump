@@ -9,6 +9,9 @@
 // https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.1996149115677472,0.25956019597877655,0.5,0.6992298231354943,0.7592519563532181,1,0.3992298231354944,0.5191203919575531,1,0.34961491156774716,0.37962597817660904,0.5,0.3193838585083955,0.4152963135660425,0.8&swatchOrder=0,1,2,3,4
 */
 
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Titillium Web', sans-serif;*/
+
 body {
     font-family: 'Maven Pro', sans-serif;
     background-color: rgb(51,66,127);
@@ -57,7 +60,8 @@ body {
 }
 
 #jumbotron-place {
-    color: white;
+    color: pink;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Dropdown Button */
