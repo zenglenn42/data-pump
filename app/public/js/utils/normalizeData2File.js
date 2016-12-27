@@ -66,7 +66,7 @@ function normalizeData(rawData, model, dataSource) {
 	//		"marker_title" = "9700 blk E Hwy 290 WB Svrd, MV/ROR, Motor Vehicle, 2015-11-03, Tues, 0:04"
 	//		"marker_label" = "";  // Might be "F" for fatality, for example.
 
-	if (dataSource === "trafficFatalities2015") {
+	if (dataSource === "trafficFatalities2015" || dataSource === "trafficFatalities2016") {
 		var normalizedSchema = {
 		    "case_number": "",
 		    "case_status": "",
@@ -132,12 +132,14 @@ function writeNormalizedJSON(model, outputFile) {
 			var rawJSON = JSON.parse(body);
 			// Empty the file.
 			fs.writeFile(outputFile, '', function(){});
+			fs.appendFileSync(outputFile, "[\n", 'utf-8');
 			for (var i = 0; i < rawJSON.length; i++) {
 				// Normalize and append json to output file, object by object.
 				var normalizedJSON = normalizeData(rawJSON[i], model, dataSource);
 				// console.log(normalizedJSON);
 				fs.appendFileSync(outputFile, util.inspect(normalizedJSON)+"\n", 'utf-8');
 			}
+			fs.appendFileSync(outputFile, "]", 'utf-8');
 			console.log("Done: ", process.cwd() + "/" + outputFile)
 		} else {
 			console.log("writeNormalizedJSON: Error: Bad status (" + response.statusCode + ") from ", dataSourceUrl);

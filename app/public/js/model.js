@@ -61,7 +61,7 @@ var model = {
 				},
 				trafficFatalities2016: {
 					description: "2016 Austin Traffic Fatalities",
-					queryUrl: "https://data.austintexas.gov/resource/vn6k-4eq5.json?",
+					queryUrl: "https://data.austintexas.gov/resource/78uj-6r93.json?",
 					apiKeyName: "$$app_token",
 					apiKey: "g9GkfcLndwliKunxNyYve0Nnv",
 					// Normalize the fetching of lat/lng from schemas that vary across dataSources.
