@@ -14,7 +14,6 @@
 var fs = require('fs');
 var model = require('../model.js');
 var request = require('request');
-var util = require('util');
 
 var outputFile = process.argv[2];
 var baseUtilName = process.argv[1].split('/').pop();
@@ -99,10 +98,8 @@ function normalizeData(rawData, model, dataSource) {
 		normalizedData.location_lng = model.getLng(rawData, dataSource);
 		normalizedData.marker_title = model.getMarkerTitle(rawData, dataSource);
 		normalizedData.marker_label = model.getMarkerLabel(rawData, dataSource);
-
 		// If we hit an atypical record, flush it rather than attempt
 		// to wedge it into the output stream.
-
 		result = (normalizedData.location_lat) ? normalizedData : undefined;
 	}
 	return result;
@@ -147,13 +144,13 @@ function writeNormalizedJSON(model, outputFile) {
 						// bulk import into relational db will likely fail.
 
 						if (wroteOne) {
-							fs.appendFileSync(outputFile, ",");
+							fs.appendFileSync(outputFile, "\n,");
 						}
 						fs.appendFileSync(outputFile, JSON.stringify(normalizedObj));
 						wroteOne = true;
 				}
 			}
-			fs.appendFileSync(outputFile, "]");
+			fs.appendFileSync(outputFile, "]\n");
 			console.log("Done: ", process.cwd() + "/" + outputFile)
 		} else {
 			console.log("writeNormalizedJSON: Error: Bad status (" + response.statusCode + ") from ", dataSourceUrl);
