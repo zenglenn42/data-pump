@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Toggling layers</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+  <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+
+  <!--clustering --> 
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+
+  <!--local-->
+  <link href='css/menu.css' rel='stylesheet' />
+  <script src='js/map.js'></script>
+  <script src='./data/dataset2015.js'></script>
+
+
+  <style>
+   body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+
+</head>
+<body>
+  <nav id='menu-ui' class='menu-ui'></nav>
+  <div id='map'></div>
+
+  <script>
+
+  L.mapbox.accessToken = 'pk.eyJ1IjoibmtnNDQ4IiwiYSI6ImNpd3JncG45bjBzZDIyeXFsd2ZnOHA4MXIifQ.cUQfTxmm4r87cMn6LfJ3Vw';
+  var dcCoords = [38.8922,-77.0348];
+  var austinCoords = [30.32067, -97.715944];
+
+  var map = L.mapbox.map('map').setView(austinCoords, 14);
+  var layers = document.getElementById('menu-ui');
+  var dataset = dataset2015;
+  var clusters = clusterLayer(dataset.features);
+  var rawData =  rawLayer(dataset);
+  addLayer(L.mapbox.tileLayer('mapbox.streets'), 'Base Map', 1);
+  addLayer(clusters, 'Cluster Layer', 3);
+  addLayer(rawData, 'Raw Layer', 2);
+
+
+
+  //addLayer(L.mapbox.tileLayer('mapbox.streets'), 'Base Map', 1);
+  //addLayer(L.mapbox.tileLayer('examples.bike-lanes'), 'Raw Markers', 2);
+  //addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Cluster View', 3);
+
+
+</script>
+</body>
+</html>

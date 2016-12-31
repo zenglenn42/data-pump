@@ -13,7 +13,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0000",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -28,7 +28,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0001",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -43,7 +43,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0002",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -58,7 +58,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0003",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -73,7 +73,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0004",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -88,7 +88,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0005",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -103,7 +103,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0006",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -118,7 +118,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0007",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -133,7 +133,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0008",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -148,7 +148,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0009",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -163,7 +163,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0010",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -178,7 +178,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0011",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -193,7 +193,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0012",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -208,7 +208,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0013",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -223,7 +223,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0014",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -238,7 +238,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0015",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -253,7 +253,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0016",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -268,7 +268,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0017",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -283,7 +283,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0018",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -298,7 +298,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0019",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -313,7 +313,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0020",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -328,7 +328,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0021",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -343,7 +343,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0022",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -358,7 +358,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0023",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -373,7 +373,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0024",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -388,7 +388,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0025",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -403,7 +403,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0026",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -418,7 +418,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0027",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -433,7 +433,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0028",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -448,7 +448,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0029",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -463,7 +463,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0030",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -478,7 +478,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0031",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -493,7 +493,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0032",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -508,7 +508,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0033",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -523,7 +523,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0034",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -538,7 +538,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0035",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -553,7 +553,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0036",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -568,7 +568,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0037",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -583,7 +583,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0038",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -598,7 +598,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0039",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -613,7 +613,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0040",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -628,7 +628,7 @@ var dataset2015 = {
       "properties": {
         "name": "Bicycle",
         "marker-color": "#ff0041",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -643,7 +643,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0042",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -658,7 +658,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0043",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -673,7 +673,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0044",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -688,7 +688,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0045",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -703,7 +703,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0046",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -718,7 +718,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0047",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -733,7 +733,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0048",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -748,7 +748,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0049",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -763,7 +763,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0050",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -778,7 +778,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0051",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -793,7 +793,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0052",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -808,7 +808,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0053",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -823,7 +823,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0054",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -838,7 +838,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0055",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -853,7 +853,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0056",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -868,7 +868,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0057",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -883,7 +883,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0058",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -898,7 +898,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0059",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -913,7 +913,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0060",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -928,7 +928,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0061",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -943,7 +943,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0062",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -958,7 +958,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0063",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -973,7 +973,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0064",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -988,7 +988,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0065",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1003,7 +1003,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0066",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1018,7 +1018,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0067",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1033,7 +1033,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0068",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1048,7 +1048,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0069",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1063,7 +1063,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0070",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1078,7 +1078,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0071",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1093,7 +1093,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0072",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1108,7 +1108,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0073",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1123,7 +1123,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0074",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1138,7 +1138,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0075",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1153,7 +1153,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0076",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1168,7 +1168,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0077",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1183,7 +1183,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0078",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1198,7 +1198,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0079",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1213,7 +1213,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0080",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1228,7 +1228,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0081",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1243,7 +1243,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0082",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1258,7 +1258,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0083",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1273,7 +1273,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0084",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1288,7 +1288,7 @@ var dataset2015 = {
       "properties": {
         "name": "Pedestrian",
         "marker-color": "#ff0085",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1303,7 +1303,7 @@ var dataset2015 = {
       "properties": {
         "name": "Bicycle",
         "marker-color": "#ff0086",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1318,7 +1318,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0087",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1333,7 +1333,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0088",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1348,7 +1348,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0089",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1363,7 +1363,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0090",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1378,7 +1378,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motor Vehicle",
         "marker-color": "#ff0091",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     },
     {
@@ -1393,7 +1393,7 @@ var dataset2015 = {
       "properties": {
         "name": "Motorcycle",
         "marker-color": "#ff0092",
-        "marker-symbol": "post"
+        "marker-symbol": "car"
       }
     }
   ]

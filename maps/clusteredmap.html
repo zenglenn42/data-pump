@@ -36,7 +36,7 @@ for (var i = 0; i < dataset2015.features.length; i++) {
         var latLong = dataset2015.features[i].geometry.coordinates;
         var title = dataset2015.features[i].properties.name;
         var marker = L.marker(new L.LatLng(latLong[1], latLong[0]), {
-            icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+            icon: L.mapbox.marker.icon({'marker-symbol': 'car', 'marker-color': '0044FF'}),
             title: title
         });
         marker.bindPopup(title);
