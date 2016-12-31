@@ -23,12 +23,28 @@ header,
     }
 }
 
+/*#card-row {
+    margin-top: 100px;
+}*/
+
 .full-bg-img {
     color: #fff;
 }
 
+.hm-black-strong .full-bg-img, .hm-black-strong .mask {
+    background-color: rgba(0,0,0,.5) !important;
+}
+
 .view {
-    background-color: #F2F2F2;
+    background: url("../img/atx.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#card-row {
+    margin-top: -100px;
 }
 
 .h1-responsive {
@@ -44,6 +60,10 @@ header,
 p {
     font-size: 20px;
     font-family: 'Titillium Web', sans-serif;
+}
+
+h4.card-title, p.card-text {
+    color: #222;
 }
 
 .btn-primary {

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body class="fuelux">
 
+<!-- general dependencies -->
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-    <title>About the team</title>
+    <!-- Load animation css. -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
 
     <!-- Load custom styling. -->
-    <link href="css/view.css" rel="stylesheet" type="text/css">
+    <link href="css/display.css" rel="stylesheet" type="text/css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -22,93 +23,71 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
 
+    <!-- Fuelux stepper dependency
+    <link href="fuelux/css/fuelux.min.css" rel="stylesheet">-->
+
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web:300,300i" rel="stylesheet">
 
-    <!-- Template styles -->
-    <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-        
-        main {
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-        }
-        
-        .extra-margins {
-            margin-top: 1rem;
-            margin-bottom: 2.5rem;
-        }
-        
-        .jumbotron {
-            text-align: center;
-        }
-    </style>
+<!--Navigation & Intro-->
+<header>
 
-</head>
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
 
-<body>
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+        <i class="fa fa-bars"></i></button>
 
+        <div class="container">
 
-    <header>
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <!--Navbar Brand-->
+                <a class="navbar-brand" href="intro.html" target="_blank"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
+                <!--Links-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Datasets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
 
-        <!--Navbar-->
-        <nav class="navbar navbar-dark primary-color-dark">
+                </ul>
 
-            <!-- Collapse button-->
-            <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
-                <i class="fa fa-bars"></i>
-            </button>
-
-            <div class="container">
-
-                <!--Collapse content-->
-                <div class="collapse navbar-toggleable-xs" id="collapseEx">
-                    <!--Navbar Brand-->
-                    <a class="navbar-brand" href="http://mdbootstrap.com/material-design-for-bootstrap/" target="_blank"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
-                    <!--Links-->
-                    <ul class="nav navbar-nav">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Locations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Datasets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">FAQ</a>
-                        </li>
-                    </ul>
-                    <!--Search form-->
-                    <form class="form-inline">
-                        <input class="form-control" type="text" placeholder="Search">
-                    </form>
-                </div>
-                <!--/.Collapse content-->
+                <!--Navbar icons-->
+                <ul class="nav navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
 
             </div>
+            <!--/.Collapse content-->
 
-        </nav>
-        <!--/.Navbar-->
-
-    </header>
-
-    <main>
-
-        <!--Main layout-->
-        <div class="jumbotron">
-            <!--First row-->
-                    <div class="container wow fadeInUp">
-                        <h1>
-                <span id="jumbotron-place">ABOUT THE TEAM</span>
-            </h1>
-                    </div>
-                </div>
-            </div>
         </div>
-            <!--/.First row-->
+
+    </nav>
+    <!--/.Navbar-->
+
+<!-- MAIN CONTENT -->
+    <!--Mask-->
+    <div class="view hm-black-strong">
+        <div class="full-bg-img flex-center">
+<main>
         
         <div class="container">
             
@@ -209,22 +188,13 @@
 <!--/Section: Team v.1-->
 
     </main>
-
-    <!--Footer-->
-    <footer class="page-footer center-on-small-only primary-color-dark">
-
-        <!--Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2016 Copyright: <a href="#"> Data-Pump </a>
-
-            </div>
         </div>
-        <!--/.Copyright-->
+    </div>
+    <!--/.Mask-->
 
-    </footer>
-    <!--/.Footer-->
 
+</header>
+<!--/Navigation & Intro-->
 
     <!-- SCRIPTS -->
 
@@ -240,11 +210,22 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
 
-     <!--Animations initialization-->
+<!-- Stepper dependencies -->
+
+    <!-- jQuery
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>-->
+
+<!--Animations initialization-->
+
     <script>
     new WOW().init();
+
+    //$('#myWizard').wizard();
     </script>
 
+    
 </body>
-
 </html>
