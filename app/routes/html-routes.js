@@ -16,4 +16,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + '../public/index.html'));
   });
 
+  app.get("/maps", function(req, res) {
+    res.sendFile(path.join(__dirname + '/../maptests/remotedata_map.html'));
+  });
+
+
 };

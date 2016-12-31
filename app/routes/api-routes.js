@@ -9,6 +9,7 @@
 // Dependencies
 //---------------------------------------------------------------------------
 var connection = require("../config/connection.js");
+var exampleData = require("../public/js/utils/dataset2015.js");
 
 //---------------------------------------------------------------------------
 // Routes
@@ -26,6 +27,10 @@ module.exports = function(app) {
 			res.json(result);
 		});
 	});
+
+	app.get("/api/example", function(req, res) {
+		res.json(exampleData);
+	})
 
 	// Route: post
 	//-------------------------------------------------------------------
