@@ -13,7 +13,7 @@ module.exports = function(app) {
 
   // Index route loads index.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname + '../public/intro.html'));
+    res.sendFile(path.join(__dirname + '/../public/intro.html'));
   });
 
   app.get("/maps", function(req, res) {

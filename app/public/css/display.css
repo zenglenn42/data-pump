@@ -27,16 +27,8 @@ header,
     color: #fff;
 }
 
-.hm-black-strong .full-bg-img, .hm-black-strong .mask {
-    background-color: rgba(0,0,0,.4) !important;
-}
-
 .view {
-    background: url("../img/atx.jpg")no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #F2F2F2;
 }
 
 .h1-responsive {
