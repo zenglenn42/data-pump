@@ -25,7 +25,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
 
-app.use(express.static(__dirname + "/app/public"));
+app.use(express.static(__dirname + "/app/maptests"));
 
 // Define the routes known to the server.
 
