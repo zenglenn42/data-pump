@@ -100,11 +100,11 @@
                     <div class="card wow fadeInUp">
 
                         <!--Card image-->
-                        <div class="view overlay hm-white-slight">
-                            <img src="img/data1.png" alt="">
+                        <div class="view overlay hm-white-slight" id="map_1">
+                            <!--<img src="img/data1.png" alt="">
                             <a href="#">
                                 <div class="mask"></div>
-                            </a>
+                            </a>-->
                         </div>
                         <!--/.Card image-->
 
@@ -130,7 +130,7 @@
                     <div class="card wow fadeInUp" data-wow-delay="0.1s"">
 
                         <!--Card image-->
-                        <div class="view overlay hm-white-slight">
+                        <div class="view overlay hm-white-slight" id="map_2">
                             <img src="img/data2.png" alt="">
                             <a href="#">
                                 <div class="mask"></div>
@@ -169,8 +169,8 @@
     <!-- SCRIPTS -->
 
     <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-
+    <!--<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>-->
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="js/tether.min.js"></script>
 
@@ -179,6 +179,24 @@
 
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.js"></script>
+
+    <!-- Mapbox -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+
+    
+
+    <!--Mapbox clustering --> 
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+
+    <!--local-->
+    <link href='css/menu.css' rel='stylesheet' />
+    <script src='js/map.js'></script>
+    
 
 <!-- Stepper dependencies -->
 
@@ -189,9 +207,40 @@
     <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>-->
 
 <!--Animations initialization-->
-
+    <nav id='menu-ui' class='menu-ui'></nav>
     <script>
     new WOW().init();
+
+      L.mapbox.accessToken = 'pk.eyJ1IjoibmtnNDQ4IiwiYSI6ImNpd3JncG45bjBzZDIyeXFsd2ZnOHA4MXIifQ.cUQfTxmm4r87cMn6LfJ3Vw';
+      var dcCoords = [38.8922,-77.0348];
+      var austinCoords = [30.32067, -97.715944];
+      var maps = [];
+      
+      var layers = document.getElementById('menu-ui');
+      $("document").ready(function(){
+        $.get("/api/example", function(data){
+            console.log(data);
+            //var newMap = $("<div>");
+            //var mapID = "map_" + (maps.length+1);
+            //newMap.attr("id", mapID);
+            //newMap.attr("class", "dynMap");
+            //$("body").append(newMap);
+            var map = L.mapbox.map("map_1").setView(austinCoords, 14);
+            initMap(map, data);
+
+        });
+
+      });
+
+      function initMap(map1, dataset){
+        
+        var clusters = clusterLayer(dataset.features);
+        var rawData =  rawLayer(dataset);
+        addLayer2(map1, L.mapbox.tileLayer('mapbox.streets'), 'Base Map', 1);
+        addLayer2(map1, clusters, 'Cluster Layer', 3);
+        addLayer2(map1, rawData, 'Raw Layer', 2);
+      }    
+
 
     //$('#myWizard').wizard();
     </script>
