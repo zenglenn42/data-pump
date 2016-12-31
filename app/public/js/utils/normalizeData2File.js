@@ -14,7 +14,6 @@
 var fs = require('fs');
 var model = require('../model.js');
 var request = require('request');
-var util = require('util');
 
 var outputFile = process.argv[2];
 var baseUtilName = process.argv[1].split('/').pop();
@@ -37,6 +36,7 @@ if (!outputFile) {
 // structure that can be directly injected into a relational database.
 
 function normalizeData(rawData, model, dataSource) {
+	var result = rawData;
 
 	// For starters, just normalize 2015 traffic data.
 	// We'll generalize later.
@@ -66,7 +66,7 @@ function normalizeData(rawData, model, dataSource) {
 	//		"marker_title" = "9700 blk E Hwy 290 WB Svrd, MV/ROR, Motor Vehicle, 2015-11-03, Tues, 0:04"
 	//		"marker_label" = "";  // Might be "F" for fatality, for example.
 
-	if (dataSource === "trafficFatalities2015") {
+	if (dataSource === "trafficFatalities2015" || dataSource === "trafficFatalities2016") {
 		var normalizedSchema = {
 		    "case_number": "",
 		    "case_status": "",
@@ -98,12 +98,11 @@ function normalizeData(rawData, model, dataSource) {
 		normalizedData.location_lng = model.getLng(rawData, dataSource);
 		normalizedData.marker_title = model.getMarkerTitle(rawData, dataSource);
 		normalizedData.marker_label = model.getMarkerLabel(rawData, dataSource);
-
-		return normalizedData;
-
-	} else {
-		return rawData;
+		// If we hit an atypical record, flush it rather than attempt
+		// to wedge it into the output stream.
+		result = (normalizedData.location_lat) ? normalizedData : undefined;
 	}
+	return result;
 }
 
 function initModel(model, place, dataSource) {
@@ -129,15 +128,29 @@ function writeNormalizedJSON(model, outputFile) {
 
 	request(dataSourceUrl, function (error, response, body) {
 		if (!error && response.statusCode == 200) {
-			var rawJSON = JSON.parse(body);
-			// Empty the file.
+			var bodyObj = JSON.parse(body); // string -> array of objects
 			fs.writeFile(outputFile, '', function(){});
-			for (var i = 0; i < rawJSON.length; i++) {
+			fs.appendFileSync(outputFile, "[");
+
+			var normalizedObj;
+			var wroteOne = false;
+			for (var i = 0; i < bodyObj.length; i++) {
 				// Normalize and append json to output file, object by object.
-				var normalizedJSON = normalizeData(rawJSON[i], model, dataSource);
-				// console.log(normalizedJSON);
-				fs.appendFileSync(outputFile, util.inspect(normalizedJSON)+"\n", 'utf-8');
+				normalizedObj = normalizeData(bodyObj[i], model, dataSource);
+				if (normalizedObj) {
+
+						// Avoid appending trailing comma to last record in file
+						// otherwise strignified json will not be well-formed and
+						// bulk import into relational db will likely fail.
+
+						if (wroteOne) {
+							fs.appendFileSync(outputFile, "\n,");
+						}
+						fs.appendFileSync(outputFile, JSON.stringify(normalizedObj));
+						wroteOne = true;
+				}
 			}
+			fs.appendFileSync(outputFile, "]\n");
 			console.log("Done: ", process.cwd() + "/" + outputFile)
 		} else {
 			console.log("writeNormalizedJSON: Error: Bad status (" + response.statusCode + ") from ", dataSourceUrl);
