@@ -1,0 +1,395 @@
+/*----------------------------------------------------------------------------
+// File: view.css
+//
+// This file contains project-specific styling for the view.
+//----------------------------------------------------------------------------
+//
+// Using monochromatic color rule from:
+//
+// https://color.adobe.com/create/color-wheel/?base=2&rule=Monochromatic&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.1996149115677472,0.25956019597877655,0.5,0.6992298231354943,0.7592519563532181,1,0.3992298231354944,0.5191203919575531,1,0.34961491156774716,0.37962597817660904,0.5,0.3193838585083955,0.4152963135660425,0.8&swatchOrder=0,1,2,3,4
+*/
+
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Titillium Web', sans-serif;*/
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #F2F2F2 !important;
+}
+
+.primary-color-dark {
+    background-color: #62689E !important;
+}
+
+.jumbotron {
+    background-color: #fff;
+    padding: 6rem !important;
+    margin-top: -50px !important;
+}
+
+.col-md-12 {
+    float: left;
+    width: 100%;
+    margin-top: -45px;
+}
+footer.page-footer {
+    margin-top: 20px;
+    padding-top: 0px !important;
+    background-color: #3E4551;
+    color: #fff;
+}
+
+/* Map area */
+#map-container {
+   height: 480px;
+   width: 640px;
+   float: left;
+   padding: 20px;
+   margin: 20px;
+ }
+
+.map {
+    height: 480px;
+    width: 640px;
+}
+
+/* Adding a black background just in case the styling devolves to
+ * white background and causes foreground white text to 'disappear'
+ * like it did earlier today.  This will give us adequate contrast 
+ * so text can still be read in a degraded css situation.
+ */
+#map-status {
+    color: white;
+    background-color: black;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Title heading */
+ h1 {
+    font-size: 70px;
+ }
+
+.jumbotron {
+    text-align: center;
+    background-image: url("../img/atx.jpg");
+    background-color: rgba(0,0,0,.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+#jumbotron-place {
+    color: #FFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 70px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: rgb(89,97,127);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100px;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: rgb(81, 106, 204);
+}
+
+/* Container <div> to position dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff0b8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.button-text {
+    background-color: rgba(50, 32, 70, 0.2);
+    font-size: 1.2em;
+    color: white;
+}
+
+/* Change color of dropdown links on hover */
+/*.dropdown-content a:hover {background-color: #f1f1f1}*/
+.dropdown-content a:hover {background-color: rgb(51,66,127)}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* Buttons */
+#traffic2015-button {
+    padding: 15px;
+    margin-top: 33px;
+    width: 350px;
+}
+
+#traffic2016-button {
+    width: 350px;
+}
+
+#trafficSignalsOnFlash-button {
+    width: 350px;
+}
+
+#austinDangerousDogs-button {
+    width: 350px;
+}
+
+#austinFoundPets-button {
+    width: 350px;
+}
+
+#reset-button {
+    width: 350px;
+    color: white;
+    background-color: #26365A;
+    font-size: 1.2em;
+}
+
+/* Media queries */
+/*iPad viewport*/
+@media screen and (max-width: 768px) {
+    .dropdown {
+        margin-left: 120px;
+    }
+
+    #traffic2015-button {
+        width: 450px;
+    }
+
+    #traffic2016-button {
+        width: 450px;
+    }
+
+    #trafficSignalsOnFlash-button {
+        width: 450px;
+    }
+
+    #austinDangerousDogs-button {
+        width: 450px;
+    }
+
+    #austinFoundPets-button {
+        width: 450px;
+    }
+
+    #reset-button {
+        width: 450px;
+    }
+}
+
+/* iPad landscape viewport */
+@media screen and (min-width: 768px)
+            and (max-width: 1024px)
+            and (orientation: landscape) {
+    .dropdown {
+        margin-left: 186px;
+    }
+
+    #map-container {
+        padding: 10px;
+        margin: 10px;
+        margin-left: 40px;
+    }
+
+}
+
+/* iPhone landscape viewport */
+@media screen
+  and (device-width: 320px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    #map-container {
+        margin-left: 10px;
+        width: 450px;
+    }
+
+    .map {
+        width: 450px;
+    }
+
+    .dropdown {
+        margin-left: 10px;
+    }
+    .jumbotron{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+  }
+
+/*Intermediate device*/
+@media screen and (max-width: 468px) {
+    h1 {
+        font-size: 50px;
+    }
+    .map {
+        width: 400px;
+    }
+
+    #map-container {
+        width: 400px;
+        padding: 10px;
+        margin: 10px;
+    }
+    .jumbotron{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .dropdown {
+        margin-left: 10px;
+    }
+
+    #traffic2015-button {
+        width: 400px;
+    }
+
+    #traffic2016-button {
+        width: 400px;
+    }
+
+    #trafficSignalsOnFlash-button {
+        width: 400px;
+    }
+
+    #austinDangerousDogs-button {
+        width: 400px;
+    }
+
+    #austinFoundPets-button {
+        width: 400px;
+    }
+
+    #reset-button {
+        width: 400px;
+    }
+}
+
+/*iPhone 6 viewport*/
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .map {
+        width: 300px;
+        height: 300px;
+    }
+
+    #map-container {
+        width: 300px;
+        height: 300px;
+        margin: 0px;
+    }
+    .jumbotron{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dropdown {
+        margin: 2px;
+        padding: 5px;
+    }
+
+    #traffic2015-button {
+        margin-top: 32px;
+        width: 300px;
+    }
+
+    #traffic2016-button {
+        width: 300px;
+    }
+
+    #trafficSignalsOnFlash-button {
+        width: 300px;
+    }
+
+    #austinDangerousDogs-button {
+        width: 300px;
+    }
+
+    #austinFoundPets-button {
+        width: 300px;
+    }
+
+    #reset-button {
+        width: 300px;
+    }
+}
+
+/*Secondary mobile phone viewport*/
+@media screen and (max-width: 270px) {
+    h1 {
+        font-size: 24px;
+    } 
+
+.map {
+        width: 250px;
+        height: 250px;
+    }
+
+    #map-container {
+        width: 250px;
+        height: 250px;
+        margin: 0px;
+    }
+    #traffic2015-button {
+        margin-top: 32px;
+        width: 250px;
+    }
+
+    #traffic2016-button {
+        width: 250px;
+    }
+
+    #trafficSignalsOnFlash-button {
+        width: 250px;
+    }
+
+    #austinDangerousDogs-button {
+        width: 250px;
+    }
+
+    #austinFoundPets-button {
+        width: 250px;
+    }
+
+    #reset-button {
+        width: 250px;
+    }   
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+
+<!-- stepper dependencies -->
+
+    <!--Import Google Icon Font-->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <!--Import materialize.css-->
+       <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"  media="screen,projection"/>
+       <!-- <link type="text/css" rel="stylesheet" href="./materialize-stepper.min.css"  media="screen,projection"/> -->
+       <link type="text/css" rel="stylesheet" href="style.css"  media="screen,projection"/>
+       <link type="text/css" rel="stylesheet" href="prism.css"  media="screen,projection"/>
+       <link type="text/css" rel="stylesheet" href="https://rawgit.com/Kinark/Materialize-stepper/master/materialize-stepper.min.css"  media="screen,projection"/>
+
+       <!--Let browser know website is optimized for mobile-->
+       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body>
+       <!--Import jQuery before materialize.js-->
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+<!-- general dependencies -->
+
+    <!-- Load animation css. -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!-- Load custom styling. -->
+    <link href="css/intro.css" rel="stylesheet" type="text/css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web:300,300i" rel="stylesheet">
+
+<!--Navigation & Intro-->
+<header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
+
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+        <i class="fa fa-bars"></i></button>
+
+        <div class="container">
+
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <!--Navbar Brand-->
+                <a class="navbar-brand" href="http://mdbootstrap.com/material-design-for-bootstrap/" target="_blank"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
+                <!--Links-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#best-features">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#examples-of-use">Datasets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">FAQ</a>
+                    </li>
+
+                </ul>
+
+                <!--Navbar icons-->
+                <ul class="nav navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.Collapse content-->
+
+        </div>
+
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Mask-->
+    <div class="view hm-black-strong">
+        <div class="full-bg-img flex-center">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInUp"><i class="fa fa-database fa-1x" aria-hidden="true"></i> DATA-PUMP</h1></li>
+                    <h2 class="h2-responsive wow fadeInUp">Austin's Analytic and Data Visualization Engine</h2></li>
+                <li>
+                    <br>
+                    <p class="p-responsive wow fadeInUp" data-wow-delay="0.2s"><i>Select the datasets you would like to compare.</i></p>
+                </li>
+
+                <li class="wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dataset One</button>
+
+<!-- STEPPER CODE -->
+
+               <div class="section scrollspy" id="non-linear">
+                  <div class="row">
+                  
+                     <div class="col l6 m12 s12">
+                        <div class="card">
+                           <div class="card-content">
+                              <ul class="stepper">
+                                 <li class="step active">
+                                    <div data-step-label="Label" class="step-title waves-effect waves-dark">Choose your location</div>
+                                    <div class="step-content">
+                                       <div class="row">
+                                          <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Option</a>
+                            <a class="dropdown-item" href="#">Another option</a>
+                            <a class="dropdown-item" href="#">A third option</a>
+                        </div>
+                                       </div>
+                                       <div class="step-actions">
+                                          <button class="waves-effect waves-dark btn blue next-step">CONTINUE</button>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="step">
+                                    <div class="step-title waves-effect waves-dark">Step 2</div>
+                                    <div class="step-content">
+                                       <div class="row">
+                                          <div class="input-field col s12">
+                                             <input id name="password" type="password" class="validate" required>
+                                             <label for="password">Your password</label>
+                                          </div>
+                                       </div>
+                                       <div class="step-actions">
+                                          <button class="waves-effect waves-dark btn blue next-step">CONTINUE</button>
+                                          <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                                       </div>
+                                    </div>
+                                 </li>
+                                 <li class="step">
+                                    <div class="step-title waves-effect waves-dark">Step 3</div>
+                                    <div class="step-content">
+                                       Finish!
+                                       <div class="step-actions">
+                                          <button class="waves-effect waves-dark btn blue" type="submit">SUBMIT</button>
+                                       </div>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+
+
+            <div class="col hide-on-small-only m3 l2">
+
+               <div class="toc-wrapper" style="top: 0px;">
+                  
+
+               </div>
+
+            </div>
+         </div>
+      </div>
+
+
+<!-- END STEPPER CODE -->
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Option</a>
+                            <a class="dropdown-item" href="#">Another option</a>
+                            <a class="dropdown-item" href="#">A third option</a>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dataset Two</button>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Option</a>
+                            <a class="dropdown-item" href="#">Another option</a>
+                            <a class="dropdown-item" href="#">A third option</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.Mask-->
+
+</header>
+<!--/Navigation & Intro-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+
+<!-- stepper dependencies -->
+
+   <script>
+   function someFunction() {
+      setTimeout(function(){$('#feedbacker').nextStep();},1000);
+   }
+
+   $(document).ready(function(){
+      $('.toc-wrapper').pushpin({ top: $('.toc-wrapper').offset().top, offset: 77 });
+      $('.scrollspy').scrollSpy();
+      $('.stepper').activateStepper();
+   });
+   </script>
+
+   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+   <!-- <script src="./materialize-stepper.min.js"></script> -->
+   <script src="prism.js"></script>
+   <script src="https://rawgit.com/Kinark/Materialize-stepper/master/materialize-stepper.min.js"></script>
+
+<!--Animations initialization-->
+
+    <script>
+    new WOW().init();
+    </script>
+
+    
+</body>
+</html>
