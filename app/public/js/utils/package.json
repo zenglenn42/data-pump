@@ -1,0 +1,24 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "Ancillary command-line project utilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zenglenn42/data-pump.git"
+  },
+  "author": "zenglenn42",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenglenn42/data-pump/issues"
+  },
+  "homepage": "https://github.com/zenglenn42/data-pump#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "request": "^2.79.0",
+    "util": "^0.10.3"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "data-pump",
+  "version": "1.0.0",
+  "description": "Second team project for UT Coding Bootcamp",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/zenglenn42/data-pump.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenglenn42/data-pump/issues"
+  },
+  "homepage": "https://github.com/zenglenn42/data-pump",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mysql": "^2.12.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"name": "data-pump",
+	"description": "A data-analytics and visualization engine based upon node.js & express",
+	"repository": "https://github.com/zenglenn42/data-pump",
+	"logo": "http://node-js-sample.herokuapp.com/node.svg",
+	"keywords": ["node", "express", "static"],
+	"image": "heroku/nodejs",
+	"buildpacks": [
+		{
+			"url": "https://github.com/heroku/heroku-buildpack-nodejs#v93"
+		},
+		{
+			"url": "heroku/nodejs"
+		}
+	]
+}
