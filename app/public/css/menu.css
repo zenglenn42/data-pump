@@ -37,5 +37,9 @@
         }
 
 #map_1 {
-  height: 400px;
+  height: 500px; bottom:0; width:100%;
+}
+
+#plot_1 {
+  height: 500px; bottom:0; width:100%;
 }
