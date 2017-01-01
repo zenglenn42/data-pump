@@ -9,6 +9,7 @@
 // Dependencies
 //---------------------------------------------------------------------------
 var connection = require("../config/connection.js");
+var connection_remote = require("../config/connection_cloud.js");
 var exampleData = require("../public/js/utils/dataset2015.js");
 
 //---------------------------------------------------------------------------
@@ -28,9 +29,19 @@ module.exports = function(app) {
 		});
 	});
 
+	app.get("/api/all_remote", function(res, res) {
+		var dbQuery = 'SELECT * FROM trafficFatalities2015';
+		connection_remote.query(dbQuery, function(err, result) {
+			res.json(result);
+		});
+	});	
+
 	app.get("/api/example", function(req, res) {
 		res.json(exampleData);
 	})
+
+	
+
 
 	// Route: post
 	//-------------------------------------------------------------------
