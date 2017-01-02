@@ -1,0 +1,71 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Titillium Web', sans-serif;*/
+
+html,
+body,
+header,
+.view {
+    height: 100%;
+}
+/* Navigation*/
+
+.navbar {
+    background-color: #62689E;
+}
+
+.top-nav-collapse {
+    background-color: #2E2E2E;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #2E2E2E;
+    }
+}
+
+/*#card-row {
+    margin-top: 100px;
+}*/
+
+.full-bg-img {
+    color: #fff;
+}
+
+.hm-black-strong .full-bg-img, .hm-black-strong .mask {
+    background-color: rgba(0,0,0,.5) !important;
+}
+
+.view {
+    background: url("../img/atx.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#card-row {
+    margin-top: -100px;
+}
+
+.h1-responsive {
+    font-size: 85px !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.h2-responsive {
+    font-size: 25px !important;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h4.card-title, p.card-text {
+    color: #222;
+}
+
+.btn-primary {
+    background: #62689E !important;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body class="fuelux">
+
+<!-- general dependencies -->
+
+    <!-- Load animation css. -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!-- Load custom styling. -->
+    <link href="css/display.css" rel="stylesheet" type="text/css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Mapbox core CSS -->
+    <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Fuelux stepper dependency
+    <link href="fuelux/css/fuelux.min.css" rel="stylesheet">-->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web:300,300i" rel="stylesheet">
+
+<!--Navigation & Intro-->
+<header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
+
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+        <i class="fa fa-bars"></i></button>
+
+        <div class="container">
+
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <!--Navbar Brand-->
+                <a class="navbar-brand" href="intro.html" target="_blank"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
+                <!--Links-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Datasets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">FAQ</a>
+                    </li>
+
+                </ul>
+
+                <!--Navbar icons-->
+                <ul class="nav navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.Collapse content-->
+
+        </div>
+
+    </nav>
+    <!--/.Navbar-->
+
+<!-- MAIN CONTENT -->
+    <!--Mask-->
+    <!--<div class="view hm-black-strong">-->
+    <div class="hm-black-strong">
+    
+        <div class="full-bg-img flex-center">
+<main>
+            <!--/.First row-->
+        
+        <div class="container">
+
+            <!--Second row-->
+            <div class="row" id="card-row">
+                <!--First columnn-->
+                <div class="col-lg-6">
+                    <!--Card-->
+                    <div class="card wow fadeInUp">
+
+                        <!--Card image-->
+                        <div class=" overlay hm-white-slight" id="map_1">
+                            <!--<img src="img/data1.png" alt="">
+                            <a href="#">
+                                <div class="mask"></div>
+                            </a>-->
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block ">
+                            <!--Title-->
+                            <h4 class="card-title">Dataset Display One</h4>
+                            <!--Text-->
+                            <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                            <br>
+                            <a href="#" class="btn btn-primary">View Map</a>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+
+                <!--Second columnn-->
+                <div class="col-lg-6">
+                    <!--Card-->
+                    <div class="card wow fadeInUp" data-wow-delay="0.1s"">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight" id="plot_1">
+                            
+                        </div>
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="card-title">Dataset Display Two</h4>
+                            <!--Text-->
+                            <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                            <br>
+                            <a href="#" class="btn btn-primary">View Map</a>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Second columnn-->
+
+            </div>
+            <!--/.Second row-->
+
+    </main>
+        </div>
+    </div>
+    <!--/.Mask-->
+
+
+</header>
+<!--/Navigation & Intro-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <!--<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>-->
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+
+    <!-- Mapbox -->
+    <script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+    <!-- Plotly -->
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+ 
+    <!--Mapbox clustering --> 
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
+
+    <!--local-->
+    <link href='css/menu.css' rel='stylesheet' />
+    <script src='js/map.js'></script>
+    
+
+<!-- Stepper dependencies -->
+
+    <!-- jQuery
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>-->
+
+<!--Animations initialization-->
+    <nav id='menu-ui' class='menu-ui'></nav>
+    <script>
+    new WOW().init();
+
+      //L.mapbox.accessToken = 'pk.eyJ1IjoibmtnNDQ4IiwiYSI6ImNpd3JncG45bjBzZDIyeXFsd2ZnOHA4MXIifQ.cUQfTxmm4r87cMn6LfJ3Vw';
+      var dcCoords = [38.8922,-77.0348];
+      var austinCoords = [30.32067, -97.715944];
+      var maps = [];
+      var map;
+      
+      var layers = document.getElementById('menu-ui');
+      $("document").ready(function(){
+        $.get("/api/example", function(data){
+            console.log(data);
+            //var newMap = $("<div>");
+            //var mapID = "map_" + (maps.length+1);
+            //newMap.attr("id", mapID);
+            //newMap.attr("class", "dynMap");
+            //$("body").append(newMap);
+            map = L.mapbox.map("map_1").setView(austinCoords, 14);
+            initMap(map, data);
+            map.invalidateSize();
+
+            var data = [
+              {
+                x: ['This', 'is', 'working!'],
+                y: [20, 14, 23],
+                type: 'bar'
+              }
+            ];
+
+            Plotly.newPlot('plot_1', data);
+
+        });
+
+      });
+
+
+
+    //$('#myWizard').wizard();
+    </script>
+
+    
+</body>
+</html>

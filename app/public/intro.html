@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body class="fuelux">
+
+<!-- general dependencies -->
+
+    <!-- Load animation css. -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!-- Load custom styling. -->
+    <link href="css/intro.css" rel="stylesheet" type="text/css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+
+    <!-- Fuelux stepper dependency
+    <link href="fuelux/css/fuelux.min.css" rel="stylesheet">-->
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web:300,300i" rel="stylesheet">
+
+<!--Navigation & Intro-->
+<header>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-dark navbar-fixed-top scrolling-navbar">
+
+        <!-- Collapse button-->
+        <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#collapseEx">
+        <i class="fa fa-bars"></i></button>
+
+        <div class="container">
+
+            <!--Collapse content-->
+            <div class="collapse navbar-toggleable-xs" id="collapseEx">
+                <!--Navbar Brand-->
+                <a class="navbar-brand" href="intro.html" target="_blank"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
+                <!--Links-->
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Datasets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+
+                </ul>
+
+                <!--Navbar icons-->
+                <ul class="nav navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <!--/.Collapse content-->
+
+        </div>
+
+    </nav>
+    <!--/.Navbar-->
+
+    <!--Mask-->
+    <div class="view hm-black-strong">
+        <div class="full-bg-img flex-center">
+            <ul>
+                <li>
+                    <h1 class="h1-responsive wow fadeInUp"><i class="fa fa-database fa-1x" aria-hidden="true"></i> DATA-PUMP</h1></li>
+                    <h2 class="h2-responsive wow fadeInUp">Texas' Analytic and Data Visualization Engine</h2></li>
+                <li>
+                    <br>
+                    <p class="p-responsive wow fadeInUp" data-wow-delay="0.2s"><i>Select a city and dataset</i></p>
+                </li>
+
+<!-- STEPPER CODE
+
+<div class="wizard" data-initialize="wizard" id="myWizard">
+<div class="steps-container">
+    <ul class="steps">
+        <li data-step="1" data-name="campaign" class="active">
+            <span class="badge">1</span>Campaign
+            <span class="chevron"></span>
+        </li>
+        <li data-step="2">
+            <span class="badge">2</span>Recipients
+            <span class="chevron"></span>
+        </li>
+        <li data-step="3" data-name="template">
+            <span class="badge">3</span>Template
+            <span class="chevron"></span>
+        </li>
+    </ul>
+</div>
+<div class="actions">
+    <button type="button" class="btn btn-default btn-prev">
+        <span class="glyphicon glyphicon-arrow-left"></span>Prev</button>
+    <button type="button" class="btn btn-primary btn-next" data-last="Complete">Next
+        <span class="glyphicon glyphicon-arrow-right"></span>
+    </button>
+</div>
+<div class="step-content">
+    <div class="step-pane active sample-pane alert" data-step="1">
+        <h4>Setup Campaign</h4>
+        <p>Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Beetroot water spinach okra water chestnut ricebean pea catsear courgette.</p>
+    </div>
+    <div class="step-pane sample-pane bg-info alert" data-step="2">
+        <h4>Choose Recipients</h4>
+        <p>Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard. </p>
+    </div>
+    <div class="step-pane sample-pane bg-danger alert" data-step="3">
+        <h4>Design Template</h4>
+        <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jÃ­cama salsify. </p>
+    </div>
+</div>
+
+
+</div><!-->
+
+                <li class="wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">City</button>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Austin</a>
+                            <a class="dropdown-item" href="#">Houston</a>
+                            <a class="dropdown-item" href="#">Dallas</a>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dataset</button>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">2015 Traffic Fatalities</a>
+                            <a class="dropdown-item" href="#">2016 Traffic Fatalities</a>
+                        </div>
+                    </div>
+
+                    <div class="button">
+                        <a href="/display" class="btn btn-primary">SUBMIT</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--/.Mask-->
+
+
+</header>
+<!--/Navigation & Intro-->
+
+    <!-- SCRIPTS -->
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/tether.min.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.js"></script>
+
+<!-- Stepper dependencies -->
+
+    <!-- jQuery
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>-->
+
+<!--Animations initialization-->
+
+    <script>
+    new WOW().init();
+
+    $('#myWizard').wizard();
+    </script>
+
+    
+</body>
+</html>
