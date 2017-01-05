@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>About</title>
 </head>
 <body class="fuelux">
 
@@ -19,6 +19,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap social icons -->
+    <link href="css/bootstrap-social.css" rel="stylesheet">
 
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
@@ -56,9 +59,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
-                    </li>
 
                 </ul>
 
@@ -86,109 +86,119 @@
 <!-- MAIN CONTENT -->
     <!--Mask-->
     <div class="view hm-black-strong">
-        <div class="full-bg-img flex-center">
-<main>
+    <div class="full-bg-img flex-center">
+        <main class="about-container">
+
+        <div class="row" id="content-header">
+            <div class="col-md-12">
+                <h1 class="content-header">About the team</h1>
+                <br>
+            </div>
+        </div>
         
+        <!-- about container -->
         <div class="container">
-            
-<!--Section: Team v.1-->
-<section class="section team-section">
-<br><br>
 
-    <!--First row-->
-    <div class="row text-xs-center">
+            <!--First row-->
+            <div class="row" id="card-row">
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card">
 
-        <!--First column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-            <div class="avatar">
-                <img src="img/glenn.png" class="rounded-circle">
-            </div>
-            <br>
-            <h4>Glenn</h4>
-            <h5>Bada$$ #1</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab.</p>
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/glenn.png" alt="Glenn">
+                        <!--/.Card image-->
 
-            <!--Facebook-->
-            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
-            <!--Twitter-->
-            <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
-            <!--Dribbble-->
-            <a class="icons-sm drib-ic"><i class="fa fa-dribbble"> </i></a>
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="about-title">Glenn</h4>
+                            <!--Text-->
+                            <p class="about-text">In the interests of scalability, Glenn virtualized his mind and body in late 2014.
+                            Physical sightings are reported, but these are merely holographic instantiations.</p>
+                            
+                        </div>
+                        <!--/.Card content-->
 
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/niraj.png" alt="Niraj">
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="about-title">Niraj</h4>
+                            <!--Text-->
+                            <p class="about-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+
+                <!--First columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/tim.png" alt="Tim">
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="about-title">Tim</h4>
+                            <!--Text-->
+                            <p class="about-text">Tim likes turtles.</p>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--First columnn-->
+
+                <!--Second columnn-->
+                <div class="col-lg-3">
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <img class="img-fluid" src="img/christina.png" alt="Christina">
+                        <!--/.Card image-->
+
+                        <!--Card content-->
+                        <div class="card-block">
+                            <!--Title-->
+                            <h4 class="about-title">Christina</h4>
+                            <!--Text-->
+                            <p class="about-text">Christina likes whales.</p>
+                        </div>
+                        <!--/.Card content-->
+
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!-- / First row -->
         </div>
-        <!--/First column-->
+        <!-- /About container-->
 
-        <!--Second column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-
-            <div class="avatar">
-                <img src="img/niraj.png" class="rounded-circle">
-            </div>
-            <br>
-            <h4>Niraj</h4>
-            <h5>Bada$$ #2</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab.</p>
-
-            <!--Linkedin-->
-            <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
-            <!--Facebook-->
-            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
-            <!--GitHub-->
-            <a class="icons-sm git-ic"><i class="fa fa-github"> </i></a>
-
-        </div>
-        <!--/Second column-->
-
-        <!--Third column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-
-            <div class="avatar">
-                <img src="img/tim.png" class="rounded-circle">
-            </div>
-            <br>
-            <h4>Tim</h4>
-            <h5>Bada$$ #3</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab.</p>
-
-            <!--Facebook-->
-            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
-            <!--Pinterest-->
-            <a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a>
-            <!--Instagram-->
-            <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
-
-        </div>
-        <!--/Third column-->
-
-        <!--Fourth column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-
-            <div class="avatar">
-                <img src="img/christina.png" class="rounded-circle">
-            </div>
-            <br>
-            <h4>Christina</h4>
-            <h5>Bada$$ #4</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab.</p>
-
-            <!--Google +-->
-            <a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
-            <!--Facebook-->
-            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
-            <!--GitHub-->
-            <a class="icons-sm git-ic"><i class="fa fa-github"> </i></a>
-
-        </div>
-        <!--/Fourth column-->
-
+        </main>
     </div>
-    <!--/First row-->
-
-</section>
-<!--/Section: Team v.1-->
-
-    </main>
-        </div>
     </div>
     <!--/.Mask-->
 

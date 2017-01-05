@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Datasets</title>
 </head>
 <body class="fuelux">
 
@@ -57,9 +57,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">FAQ</a>
-                    </li>
 
                 </ul>
 
@@ -86,11 +83,19 @@
 
 <!-- MAIN CONTENT -->
     <!--Mask-->
-    <!--<div class="view hm-black-strong">-->
-    <div class="hm-black-strong">
+    <div class="view hm-black-strong">
+    <!--<div class="hm-black-strong">-->
     
         <div class="full-bg-img flex-center">
-<main>
+
+<main class="map-container">
+
+        <div class="row" id="content-header">
+            <div class="col-md-12">
+                <h1 class="content-header">Data Visualizations</h1>
+                <br>
+            </div>
+        </div>
             <!--/.First row-->
         
         <div class="container">
@@ -118,7 +123,7 @@
                             <!--Text-->
                             <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
                             <br>
-                            <a href="#" class="btn btn-primary">View Map</a>
+                            <nav id='menu-ui' class='menu-ui'></nav>
                         </div>
                         <!--/.Card content-->
 
@@ -144,8 +149,6 @@
                             <h4 class="card-title">Dataset Display Two</h4>
                             <!--Text-->
                             <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                            <br>
-                            <a href="#" class="btn btn-primary">View Map</a>
                         </div>
                         <!--/.Card content-->
 
@@ -204,7 +207,7 @@
     <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>-->
 
 <!--Animations initialization-->
-    <nav id='menu-ui' class='menu-ui'></nav>
+    
     <script>
     new WOW().init();
 
