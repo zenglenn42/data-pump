@@ -36,7 +36,7 @@ header,
 }
 
 .view {
-    background: url("../img/atx.jpg")no-repeat center center fixed;
+    background: url("../img/data-rig-900x500.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -59,7 +59,7 @@ header,
 }
 
 p {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Titillium Web', sans-serif;
 }
 

@@ -6,6 +6,7 @@ body,
 header,
 .view {
     height: 100%;
+    overflow: scroll;
 }
 /* Navigation*/
 
@@ -28,15 +29,19 @@ header,
 }*/
 
 .full-bg-img {
-    color: #fff;
+    background: url("../img/atx-copy.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-.hm-black-strong .full-bg-img, .hm-black-strong .mask {
-    background-color: rgba(0,0,0,.5) !important;
+/*.hm-black-strong .full-bg-img, .hm-black-strong .mask {
+    background-color: rgba(0,0,0,0);*/
 }
 
 .view {
-    background: url("../img/atx.jpg")no-repeat center center fixed;
+    background: url("../img/atx-copy.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -91,6 +96,18 @@ h4.card-title, p.card-text {
     text-transform: uppercase;
 }
 
+.about-header {
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.about.container {
+    margin-top: 40px;
+}
+
 p.about-text {
     font-size: 18px;
     color: #222;
@@ -102,4 +119,8 @@ h4.about-title {
     color: #222;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
+}
+
+#about-the-team {
+    margin-top: -90px !important;
 }
