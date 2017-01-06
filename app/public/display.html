@@ -29,6 +29,7 @@
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web:300,300i" rel="stylesheet">
+     <link href='css/menu.css' rel='stylesheet' />
 
 <!--Navigation & Intro-->
 <header>
@@ -146,8 +147,9 @@
                         <div class="card-block">
                             <!--Title-->
                             <h4 class="card-title">Plot</h4>
+                            <div class="row"><div class="col-lg-6">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-primary">Choose X-Axis Data</button>
+                                <button type="button" class="btn btn-primary">X-Axis</button>
                                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="sr-only">Toggle Dropdown</span>
                                 </button>
@@ -163,6 +165,19 @@
                                     <a class="dropdown-item" href="#">Separated link</a>-->
                                 </div>
                             </div>
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Compare</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item datasetitem" key="2016"       href="#">2016 Dataset</a>
+                                                                      <!--<div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>-->
+                                </div>
+                            </div></div>
 
 
                             <!--Text-->
@@ -212,7 +227,7 @@
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
 
     <!--local-->
-    <link href='css/menu.css' rel='stylesheet' />
+   
     <script src='js/map.js'></script>
     <script src='js/plots.js'></script>
     
@@ -236,7 +251,11 @@
       var maps = [];
       var map;
       var layout = {title: "", xaxis: {title: ""}, yaxis: {title: ""}};
-      
+      layout.title = "Austin Traffic Fatality Analysis";
+      layout.xaxis.title = "Weekday";
+      layout.yaxis.title = "# of Incidents";
+      var lastselected = "weekday";
+
       var layers = document.getElementById('menu-ui');
       $("document").ready(function(){
         $.get("/api/example/2015", function(data){
@@ -249,30 +268,38 @@
             map = L.mapbox.map("map_1").setView(austinCoords, 14);
             initMap(map, data);
             map.invalidateSize();
-            layout.title = "Austin Traffic Fatality Analysis";
-            layout.xaxis.title = "Weekday";
-            layout.yaxis.title = "# of Incidents";
+            
 
-            var data2 = plotLayout(data.features, 'weekday');
-            //console.log(data2);
-            //plotCounts(data.features, 'of_fatalities');
-            Plotly.newPlot('plot_1', data2, layout);
+            var data2 = plotLayout(data.features, 'weekday', "#202662");
+            Plotly.newPlot('plot_1', [data2], layout);
 
             $(".plotitem").on("click", function(e){
-
-            console.log($(this).attr("key"));
-            console.log($(this).text());
-            tmpdata = plotLayout(data.features, $(this).attr("key"));
+            lastselected = $(this).attr("key");    
+            tmpdata = plotLayout(data.features, $(this).attr("key"), "#202662");
             layout.xaxis.title = $(this).text();
-            Plotly.newPlot('plot_1', tmpdata, layout);
+            Plotly.newPlot('plot_1', [tmpdata], layout);
 
-      })
-
-
+            })
 
         });
 
       });
+
+
+      $(".datasetitem").on("click", function(e){
+        $.get("/api/example/2015", function(data){
+            $.get("/api/example/2016", function(data2){
+                var tmpdata1 = plotLayout(data.features, lastselected, "#202662");
+                var tmpdata2 = plotLayout(data2.features, lastselected, "#62689E");
+                layout.xaxis.title
+                Plotly.newPlot('plot_1', [tmpdata1,tmpdata2], layout);
+
+      })
+        })
+         });
+
+
+
 
       //$(".plotitem").on("click", function(e){
 

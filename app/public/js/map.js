@@ -42,6 +42,7 @@ function addLayer(map, layer, name, zIndex) {
     // Create a simple layer switcher that
     // toggles layers on and off.
     var link = document.createElement('a');
+        //link.type = "button";
         link.href = '#';
         link.className = 'active';
         link.innerHTML = name;

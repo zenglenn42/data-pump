@@ -20,40 +20,40 @@ function clusterLayer(dataset){
 	return clusterMarkers;
 }
 
-function plotLayout(dataset, variable){
+function plotLayout(dataset, variable, color){
 
     switch(variable) {
         case "weekday" : 
             var xAxis = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
             var yAxis = plotCountsV2(dataset, xAxis, "day");
-            return [{x: xAxis, y: yAxis[0], type: "bar", marker: {color: "#202662", opacity: 0.6}, text: yAxis[1] }];
+            return {x: xAxis, y: yAxis[0], type: "bar", marker: {color: color, opacity: 0.6}, text: yAxis[1] };
             break;
 
         case "month"   : 
             var xAxis = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             var yAxis = plotCountsV2(dataset, xAxis, "month");
-            return [{x: xAxis, y: yAxis[0], type: "bar", marker: {color: "#202662", opacity: 0.6}, text: yAxis[1] }];
+            return {x: xAxis, y: yAxis[0], type: "bar", marker: {color: color, opacity: 0.6}, text: yAxis[1] };
             break;
         case "timeOfDay" : getTimeAxes(); break;
         case "type"      : 
             var xAxis = ["Pedestrian", "Motorcycle", "Motor Vehicle"];
             var yAxis = plotCountsV2(dataset, xAxis, "name");
-            return [{x: xAxis, y: yAxis[0], type: "bar", marker: {color: "#202662", opacity: 0.6}, text: yAxis[1] }];
+            return {x: xAxis, y: yAxis[0], type: "bar", marker: {color: color, opacity: 0.6}, text: yAxis[1] };
             break;
         case "numFatalities" : 
             var xAxis = ["1", "2", "3", "4", "5"];
             var yAxis = plotCountsV2(dataset, xAxis, "of_fatalities");
-            return [{x: xAxis, y: yAxis[0], type: "bar", marker: {color: "#202662", opacity: 0.6}, text: yAxis[1] }];
+            return {x: xAxis, y: yAxis[0], type: "bar", marker: {color: color, opacity: 0.6}, text: yAxis[1] };
             break;
         case "speeding" : 
             var xAxis = ["Y", "N", "suspected"];
             var yAxis = plotCountsV2(dataset, xAxis, "speeding");
-            return [{x: xAxis, y: yAxis[0], type: "bar", marker: {color: "#202662", opacity: 0.6}, text: yAxis[1] }];
+            return {x: xAxis, y: yAxis[0], type: "bar", marker: {color: color, opacity: 0.6}, text: yAxis[1] };
             break;
         case "impaired_type" : 
             var xAxis = ["DRIVER", "MC DRIVER", "PED", "PED and DRIVER", "DRIVER (pending)", "none"];
             var yAxis = plotCountsV2(dataset, xAxis, "impaired_type");
-            return [{x: xAxis, y: yAxis[0], type: "bar", marker: {color: "#202662", opacity: 0.6}, text: yAxis[1] }];
+            return {x: xAxis, y: yAxis[0], type: "bar", marker: {color: color, opacity: 0.6}, text: yAxis[1] };
             break;    
     }
    
