@@ -235,6 +235,7 @@
       var austinCoords = [30.32067, -97.715944];
       var maps = [];
       var map;
+      var layout = {title: "", xaxis: {title: ""}, yaxis: {title: ""}};
       
       var layers = document.getElementById('menu-ui');
       $("document").ready(function(){
@@ -248,24 +249,22 @@
             map = L.mapbox.map("map_1").setView(austinCoords, 14);
             initMap(map, data);
             map.invalidateSize();
+            layout.title = "Austin Traffic Fatality Analysis";
+            layout.xaxis.title = "Weekday";
+            layout.yaxis.title = "# of Incidents";
 
-            var data2 = [
-              {
-                x: ['This', 'is', 'working!'],
-                y: [20, 14, 23],
-                type: 'bar'
-              }
-            ];
-            data2=plotLayout(data.features, 'weekday');
+            var data2 = plotLayout(data.features, 'weekday');
             //console.log(data2);
             //plotCounts(data.features, 'of_fatalities');
-            Plotly.newPlot('plot_1', data2);
+            Plotly.newPlot('plot_1', data2, layout);
 
             $(".plotitem").on("click", function(e){
 
             console.log($(this).attr("key"));
+            console.log($(this).text());
             tmpdata = plotLayout(data.features, $(this).attr("key"));
-            Plotly.newPlot('plot_1', tmpdata);
+            layout.xaxis.title = $(this).text();
+            Plotly.newPlot('plot_1', tmpdata, layout);
 
       })
 
