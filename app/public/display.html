@@ -118,9 +118,9 @@
                         <!--Card content-->
                         <div class="card-block ">
                             <!--Title-->
-                            <h4 class="card-title">Dataset Display One</h4>
+                            <h4 class="card-title">Map</h4>
                             <!--Text-->
-                            <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                            <p class="card-text"></p>
                             <br>
                             <nav id='menu-ui' class='menu-ui'></nav>
                         </div>
@@ -145,9 +145,28 @@
                         <!--Card content-->
                         <div class="card-block">
                             <!--Title-->
-                            <h4 class="card-title">Dataset Display Two</h4>
+                            <h4 class="card-title">Plot</h4>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Choose X-Axis Data</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item plotitem" key="weekday"       href="#">Weekday</a>
+                                    <a class="dropdown-item plotitem" key="month"         href="#">Month</a>
+                                    <a class="dropdown-item plotitem" key="numFatalities" href="#"># of Fatalities in Incident</a>
+                                    <a class="dropdown-item plotitem" key="type"          href="#">Type</a>
+                                    <a class="dropdown-item plotitem" key="speeding"      href="#">Was Speeding?</a>
+                                    <a class="dropdown-item plotitem" key="impaired_type"      href="#">Impaired?</a>
+
+                                    <!--<div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>-->
+                                </div>
+                            </div>
+
+
                             <!--Text-->
-                            <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                            <p class="card-text"></p>
                         </div>
                         <!--/.Card content-->
 
@@ -195,6 +214,7 @@
     <!--local-->
     <link href='css/menu.css' rel='stylesheet' />
     <script src='js/map.js'></script>
+    <script src='js/plots.js'></script>
     
 
 <!-- Stepper dependencies -->
@@ -218,7 +238,7 @@
       
       var layers = document.getElementById('menu-ui');
       $("document").ready(function(){
-        $.get("/api/example", function(data){
+        $.get("/api/example/2015", function(data){
             console.log(data);
             //var newMap = $("<div>");
             //var mapID = "map_" + (maps.length+1);
@@ -229,21 +249,39 @@
             initMap(map, data);
             map.invalidateSize();
 
-            var data = [
+            var data2 = [
               {
                 x: ['This', 'is', 'working!'],
                 y: [20, 14, 23],
                 type: 'bar'
               }
             ];
+            data2=plotLayout(data.features, 'weekday');
+            //console.log(data2);
+            //plotCounts(data.features, 'of_fatalities');
+            Plotly.newPlot('plot_1', data2);
 
-            Plotly.newPlot('plot_1', data);
+            $(".plotitem").on("click", function(e){
+
+            console.log($(this).attr("key"));
+            tmpdata = plotLayout(data.features, $(this).attr("key"));
+            Plotly.newPlot('plot_1', tmpdata);
+
+      })
+
+
 
         });
 
       });
 
+      //$(".plotitem").on("click", function(e){
 
+        //console.log($(this).attr("key"));
+        //tmpdata = plotLayout(data.features, $(this).attr("key"));
+        //Plotly.newPlot('plot_1', tmpdata);
+
+      //})
 
     //$('#myWizard').wizard();
     </script>

@@ -10,7 +10,8 @@
 //---------------------------------------------------------------------------
 var connection = require("../config/connection.js");
 var connection_remote = require("../config/connection_cloud.js");
-var exampleData = require("../public/js/utils/dataset2015.js");
+var exampleData2015 = require("../public/js/utils/dataset2015_v2.js");
+var exampleData2016 = require("../public/js/utils/dataset2016_v2.js");
 
 //---------------------------------------------------------------------------
 // Routes
@@ -36,8 +37,12 @@ module.exports = function(app) {
 		});
 	});	
 
-	app.get("/api/example", function(req, res) {
-		res.json(exampleData);
+	app.get("/api/example/2015", function(req, res) {
+		res.json(exampleData2015);
+	})
+
+	app.get("/api/example/2016", function(req, res) {
+		res.json(exampleData2016);
 	})
 
 	

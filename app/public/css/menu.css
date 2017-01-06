@@ -26,11 +26,11 @@
       color:#404040;
       }
     .menu-ui a.active {
-      background:#3887BE;
+      background:#62689E;
       color:#FFF;
       }
       .menu-ui a.active:hover {
-        background:#3074a4;
+        background:#52588E;
         }
 
 #map_1 {

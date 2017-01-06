@@ -8,8 +8,9 @@ function clusterLayer(dataset){
 	for (var i = 0; i < dataset.length; i++) {
 	        var latLong = dataset[i].geometry.coordinates;
 	        var title = dataset[i].properties.name;
+            var icontype = dataset[i].properties['marker-symbol'];
 	        var marker = L.marker(new L.LatLng(latLong[1], latLong[0]), {
-	            icon: L.mapbox.marker.icon({'marker-symbol': 'car', 'marker-color': '0044FF'}),
+	            icon: L.mapbox.marker.icon({'marker-symbol': icontype, 'marker-color': '0044FF'}),
 	            title: title
 	        });
 	        marker.bindPopup(title);

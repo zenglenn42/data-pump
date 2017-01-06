@@ -76,7 +76,7 @@ h4.card-title, p.card-text {
 }
 
 .map-container{
-    margin-top: 125px;
+    margin-top: 25px;
 }
 
 .about-container{
@@ -86,8 +86,8 @@ h4.card-title, p.card-text {
 #content-header {
     color: #fff;
     text-align: center;
-    padding-top: 20px;
-    margin-bottom: 50px !important;
+    padding-top: 5px;
+    /*margin-bottom: 50px !important;*/
 }
 
 .content-header {
