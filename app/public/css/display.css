@@ -75,6 +75,11 @@ h4.card-title, p.card-text {
     background: #62689E !important;
 }
 
+.btn-primary.active {
+    
+    background: #0D1246 !important;
+}
+
 .map-container{
     margin-top: 25px;
 }
