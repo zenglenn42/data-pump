@@ -8,7 +8,7 @@ With this second team project of the UT Full Stack Coding Bootcamp, we take a ru
 
 ## Analytics Page
 
-![alt tag](assets/img/analytics.png)
+![alt tag](assets/img/analytics-page.png)
 
 ## Running Locally
 
