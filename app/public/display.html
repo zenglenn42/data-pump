@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Datasets</title>
 </head>
 <body class="fuelux">
 
@@ -11,8 +11,7 @@
     <!-- Load animation css. -->
     <link href="css/animate.css" rel="stylesheet" type="text/css">
 
-    <!-- Load custom styling. -->
-    <link href="css/display.css" rel="stylesheet" type="text/css">
+    
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -23,12 +22,14 @@
     <link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
-
+    <!-- Load custom styling. -->
+    <link href="css/display.css" rel="stylesheet" type="text/css">
     <!-- Fuelux stepper dependency
     <link href="fuelux/css/fuelux.min.css" rel="stylesheet">-->
 
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Titillium+Web:300,300i" rel="stylesheet">
+     <link href='css/menu.css' rel='stylesheet' />
 
 <!--Navigation & Intro-->
 <header>
@@ -45,7 +46,7 @@
             <!--Collapse content-->
             <div class="collapse navbar-toggleable-xs" id="collapseEx">
                 <!--Navbar Brand-->
-                <a class="navbar-brand" href="intro.html" target="_blank"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
+                <a class="navbar-brand" href="intro.html"><i class="fa fa-database fa-1x" aria-hidden="true"></i>  DATA-PUMP</a>
                 <!--Links-->
                 <ul class="nav navbar-nav">
                     <li class="nav-item">
@@ -55,10 +56,7 @@
                         <a class="nav-link" href="#">Datasets</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">FAQ</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
 
                 </ul>
@@ -86,14 +84,21 @@
 
 <!-- MAIN CONTENT -->
     <!--Mask-->
-    <!--<div class="view hm-black-strong">-->
-    <div class="hm-black-strong">
+    <!--<div class="hm-black-strong">-->
     
-        <div class="full-bg-img flex-center">
-<main>
-            <!--/.First row-->
         
-        <div class="container">
+
+        <main class="map-container">
+
+        <div class="row" id="content-header">
+            <div class="col-md-12">
+                <h1 class="content-header">Data Visualizations</h1>
+                <br>
+            </div>
+        </div>
+            
+            <!--/.First row-->
+        <div class="container" id="cards">
 
             <!--Second row-->
             <div class="row" id="card-row">
@@ -114,11 +119,23 @@
                         <!--Card content-->
                         <div class="card-block ">
                             <!--Title-->
-                            <h4 class="card-title">Dataset Display One</h4>
+                            <h4 class="card-title">Map</h4>
                             <!--Text-->
-                            <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                            <p class="card-text"></p>
                             <br>
-                            <a href="#" class="btn btn-primary">View Map</a>
+                            <nav id='menu-ui' class='menu-ui'></nav>
+                            <!--<div id="menu-ui" class="btn-group-vertical" data-toggle="buttons">
+                                <!--<label class="btn btn-primary active">
+                                <input type="checkbox" checked autocomplete="off"> Base Map
+                                </label>
+                                <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Cluster Layer
+                                </label>
+                                <label class="btn btn-primary">
+                                <input type="checkbox" autocomplete="off"> Raw Data
+                              </label>
+                            </div> -->
+
                         </div>
                         <!--/.Card content-->
 
@@ -141,11 +158,42 @@
                         <!--Card content-->
                         <div class="card-block">
                             <!--Title-->
-                            <h4 class="card-title">Dataset Display Two</h4>
+                            <h4 class="card-title">Plot</h4>
+                            <div class="row"><div class="col-lg-6">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">X-Axis</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item plotitem" key="weekday"       href="#">Weekday</a>
+                                    <a class="dropdown-item plotitem" key="month"         href="#">Month</a>
+                                    <a class="dropdown-item plotitem" key="numFatalities" href="#"># of Fatalities in Incident</a>
+                                    <a class="dropdown-item plotitem" key="type"          href="#">Type</a>
+                                    <a class="dropdown-item plotitem" key="speeding"      href="#">Was Speeding?</a>
+                                    <a class="dropdown-item plotitem" key="impaired_type"      href="#">Impaired?</a>
+
+                                    <!--<div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>-->
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-primary">Compare</button>
+                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item datasetitem" key="2016"       href="#">2016 Dataset</a>
+                                                                      <!--<div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>-->
+                                </div>
+                            </div></div>
+                           
+
                             <!--Text-->
-                            <p class="card-text">Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                            <br>
-                            <a href="#" class="btn btn-primary">View Map</a>
+                            <p class="card-text"></p>
                         </div>
                         <!--/.Card content-->
 
@@ -191,8 +239,9 @@
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' />
 
     <!--local-->
-    <link href='css/menu.css' rel='stylesheet' />
+   
     <script src='js/map.js'></script>
+    <script src='js/plots.js'></script>
     
 
 <!-- Stepper dependencies -->
@@ -204,7 +253,7 @@
     <script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>-->
 
 <!--Animations initialization-->
-    <nav id='menu-ui' class='menu-ui'></nav>
+    
     <script>
     new WOW().init();
 
@@ -213,10 +262,15 @@
       var austinCoords = [30.32067, -97.715944];
       var maps = [];
       var map;
-      
+      var layout = {title: "", xaxis: {title: ""}, yaxis: {title: ""}};
+      layout.title = "Austin Traffic Fatality Analysis";
+      layout.xaxis.title = "Weekday";
+      layout.yaxis.title = "# of Incidents";
+      var lastselected = "weekday";
+
       var layers = document.getElementById('menu-ui');
       $("document").ready(function(){
-        $.get("/api/example", function(data){
+        $.get("/api/example/2015", function(data){
             console.log(data);
             //var newMap = $("<div>");
             //var mapID = "map_" + (maps.length+1);
@@ -226,22 +280,46 @@
             map = L.mapbox.map("map_1").setView(austinCoords, 14);
             initMap(map, data);
             map.invalidateSize();
+            
 
-            var data = [
-              {
-                x: ['This', 'is', 'working!'],
-                y: [20, 14, 23],
-                type: 'bar'
-              }
-            ];
+            var data2 = plotLayout(data.features, 'weekday', "#202662");
+            Plotly.newPlot('plot_1', [data2], layout);
 
-            Plotly.newPlot('plot_1', data);
+            $(".plotitem").on("click", function(e){
+            lastselected = $(this).attr("key");    
+            tmpdata = plotLayout(data.features, $(this).attr("key"), "#202662");
+            layout.xaxis.title = $(this).text();
+            Plotly.newPlot('plot_1', [tmpdata], layout);
+
+            })
 
         });
 
       });
 
 
+      $(".datasetitem").on("click", function(e){
+        $.get("/api/example/2015", function(data){
+            $.get("/api/example/2016", function(data2){
+                var tmpdata1 = plotLayout(data.features, lastselected, "#202662");
+                var tmpdata2 = plotLayout(data2.features, lastselected, "#62689E");
+                layout.xaxis.title
+                Plotly.newPlot('plot_1', [tmpdata1,tmpdata2], layout);
+
+      })
+        })
+         });
+
+
+
+
+      //$(".plotitem").on("click", function(e){
+
+        //console.log($(this).attr("key"));
+        //tmpdata = plotLayout(data.features, $(this).attr("key"));
+        //Plotly.newPlot('plot_1', tmpdata);
+
+      //})
 
     //$('#myWizard').wizard();
     </script>

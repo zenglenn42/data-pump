@@ -6,6 +6,7 @@ body,
 header,
 .view {
     height: 100%;
+    overflow: scroll;
 }
 /* Navigation*/
 
@@ -14,29 +15,57 @@ header,
 }
 
 .top-nav-collapse {
-    background-color: #2E2E2E;
+    background-color: #62689E;
 }
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #2E2E2E;
+        background-color: #62689E;
     }
+
+    .content-header {
+    font-size: 40px !important;
+    }
+
+    #content-header {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 200px !important;
+    margin-top: 50px;
+    }
+
+    .map-container {
+    min-height: 1600px;
+    margin-top: 50px;
+    }
+
+    .col-lg-6 {
+    margin-top: 100px;
+    }
+
 }
 
 /*#card-row {
     margin-top: 100px;
 }*/
 
-.full-bg-img {
-    color: #fff;
+.map-container {
+    background: url("../img/atx-copy.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 950px;
+    margin-top: 50px;
 }
 
-.hm-black-strong .full-bg-img, .hm-black-strong .mask {
-    background-color: rgba(0,0,0,.5) !important;
+/*.hm-black-strong .full-bg-img, .hm-black-strong .mask {
+    background-color: rgba(0,0,0,0);*/
 }
 
 .view {
-    background: url("../img/atx.jpg")no-repeat center center fixed;
+    background: url("../img/atx-copy.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -68,4 +97,60 @@ h4.card-title, p.card-text {
 
 .btn-primary {
     background: #62689E !important;
+}
+
+.btn-primary.active {
+    
+    background: #0D1246 !important;
+}
+
+.map-container{
+    margin-top: 25px;
+}
+
+.about-container{
+    margin-top: -50px;
+}
+
+#content-header {
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 50px !important;
+    margin-top: 50px;
+}
+
+.content-header {
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.about-header {
+    font-size: 60px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+.about.container {
+    margin-top: 40px;
+}
+
+p.about-text {
+    font-size: 18px;
+    color: #222;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h4.about-title {
+    font-size: 25px;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+#about-the-team {
+    margin-top: -90px !important;
 }

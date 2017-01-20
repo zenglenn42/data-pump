@@ -19,7 +19,11 @@ header,
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #2E2E2E;
+        background-color: #62689E;
+    }
+
+    .h1-responsive {
+        font-size: 50px !important;
     }
 }
 
@@ -32,7 +36,7 @@ header,
 }
 
 .view {
-    background: url("../img/atx.jpg")no-repeat center center fixed;
+    background: url("../img/data-rig-900x500.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,20 +44,38 @@ header,
 }
 
 .h1-responsive {
-    font-size: 85px !important;
+    font-size: 87px !important;
     font-family: 'Montserrat', sans-serif;
 }
 
 .h2-responsive {
-    font-size: 25px !important;
+    font-size: 24px !important;
     font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+}
+
+.card {
+    margin-top: 50px;
 }
 
 p {
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Titillium Web', sans-serif;
 }
 
 .btn-primary {
     background: #62689E !important;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
 }
