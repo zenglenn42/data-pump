@@ -1,6 +1,6 @@
 # data-pump [![Circle CI](https://circleci.com/gh/zenglenn42/data-pump.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/zenglenn42/data-pump)
 
-With this second team project of the UT Full Stack Coding Bootcamp, we take a run at adding higher-order visulization to location-based traffic data.
+With this second team project of the UT Full Stack Coding Bootcamp, we take a run at adding higher-order visualization to location-based traffic data.
 
 ## Landing Page
 
